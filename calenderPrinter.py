@@ -1,9 +1,14 @@
+# add a thing that means it can only take months that equal = 28, 29, 30, 31
+#if they say 29 ask if its a leap year and if they say yes THEn continie and only then
+
+
 
     #take user input: number of days in month
 days_in_month = int(input("How many days are in the month? "))
 
     #take user input: day the month starts on
 first_day = int(input("What day of the week does the month start on? (Sun=1, Monday=2, ... Sat= 7) "))
+#user cant input value > 7
 
  # function to print calendar
 def calender_printer(days_in_month, first_day):

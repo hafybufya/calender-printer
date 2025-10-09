@@ -3,13 +3,17 @@
 
 #make sure no numbers hardcoded
 
-day_in_week = 7 #not hardcoded now 
+day_in_week = 7 
+
+prompts_days_in_month= "How many days are in the month? "
+
+prompt_first_day = "What day of the week does the month start on? (Sun=1, Monday=2, ... Sat= 7) "
 
     #take user input: number of days in month
-days_in_month = int(input("How many days are in the month? "))
+days_in_month = int(input( prompts_days_in_month))
 
     #take user input: day the month starts on
-first_day = int(input("What day of the week does the month start on? (Sun=1, Monday=2, ... Sat= 7) "))
+first_day = int(input(prompt_first_day))
 #user cant input value > 7
 
  # function to print calendar

@@ -28,8 +28,7 @@ def get_days_in_month():
                 print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}")
         #users can't input non-integers        
         except ValueError:
-            print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}") #unhardcode numbers
-
+            print(f"{prompt_error_handling} {min_number_month_days} to {max_number_month_days}")
         
 
 def get_days_in_week():

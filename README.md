@@ -1,8 +1,10 @@
 # Calender Printer
 
-Calender printer repository which prints a formatted calender based on user input of day the week begins and number of days in the week.
+This repository contains a Python program that prints a formatted calendar based on user input for:
+* The day of the week the month begins on
+* The number of days in the month
 
-📁 Project Structure
+## 📁 Project Structure
 
 ```
 
@@ -15,7 +17,7 @@ Calender printer repository which prints a formatted calender based on user inpu
 
 ```
 
-🛠️ Installation
+## 🛠️ Installation
 
 Python 3.10 or newer to run python files
-
+* No external python libraries required

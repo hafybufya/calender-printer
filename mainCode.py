@@ -22,17 +22,29 @@ prompt_error_handling_week = f"Enter a value between {min_number_week_days} to {
 # ---------------------------------------------------------------------
 
 def get_days_in_month():
-    """function which gets the number of days in a month from users and preforms error handling """   
+
+    """
+
+    Get the number of days in a month from a user
+
+    Returns
+    -------
+    integer between 28 to 31 -> preforms extensive error testing to ensure
+                                users input a value in this range 
+    
+    """
+
     while True:
         try:
-            days_in_month = int(input(prompts_days_in_month))
-            
-        except ValueError: #users can't input non-integers
+            days_in_month = int(input(prompts_days_in_month))        
+        except ValueError: # Users can't input non-integers
             raise ValueError(f"{prompt_error_handling_month}")
 
+         # Users can't input values that dont fall betwwen min_number and max number
         if days_in_month < min_number_month_days or days_in_month > max_number_month_days:
             raise ValueError(f"{prompt_error_handling_month}")
         
+        # Returned to be passed into calender_printer()
         return days_in_month
 
 # ---------------------------------------------------------------------
@@ -40,15 +52,29 @@ def get_days_in_month():
 # ---------------------------------------------------------------------
 
 def get_days_in_week():
-    """function which gets the day of the week the month starts on and preforms error handling """               
+    
+    """
+
+    Get the day the week starts, from user
+
+    Returns
+    -------
+    integer between 1 to 7 -> preforms extensive error testing to ensure
+                                users input a value in this range 
+    
+    """
+
     while True:
         try:
             first_day  = int(input(prompt_first_day))
-        except ValueError:
+        except ValueError: # Users can't input non-integers
             raise ValueError(f"{prompt_error_handling_week}")
-              
-        if first_day < min_number_week_days or first_day > max_number_week_days:
-            raise ValueError(f"{prompt_error_handling_week}")   
+
+        # Users can't input values that dont fall betwwen min_number and max number  
+        if first_day < min_number_week_days or first_day > max_number_week_days:      
+            raise ValueError(f"{prompt_error_handling_week}") 
+        
+        # Returned to be passed into calender_printer()  
         return first_day
 
 # ---------------------------------------------------------------------
@@ -56,7 +82,22 @@ def get_days_in_week():
 # ---------------------------------------------------------------------
 
 def calender_printer(days_in_month, first_day):
-    """function which prints a calender""" 
+
+    """
+
+    Prints the calendar using paramters user has passed in
+
+    Paramaters
+    ----------
+    days_in_month : integer, Number of days in the month (28-31)
+    first_day     : integer, Day of the week the month starts on (1-7)
+
+    Returns
+    -------
+    list -> list of weekday names
+    
+    """
+
     calender_title = [" S", "M" , "T", "W", "T", "F", "S"]
     print("  ".join(calender_title)) 
 
@@ -70,7 +111,8 @@ def calender_printer(days_in_month, first_day):
 
         # New line after every 7th day (including spaces)
         if (i + first_day - 1) % day_in_week == 0:
-            print()  # newline
+            print()  # Newline
+
     return calender_title
 
 if __name__ == "__main__":

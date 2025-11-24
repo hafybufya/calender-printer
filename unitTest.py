@@ -1,5 +1,5 @@
 import unittest
-from  calenderPrinter import *
+from  mainCode import *
 
 # define the unit tests
 class my_unit_tests(unittest.TestCase):

@@ -21,3 +21,8 @@ This repository contains a Python program that prints a formatted calendar based
 
 Python 3.10 or newer to run python files
 * No external python libraries required
+
+
+## 📄 License
+This project is open source and available under the [MIT License](https://github.com/hafybufya/calender-printer/blob/main/LICENSE).
+
